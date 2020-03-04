@@ -1,10 +1,12 @@
 #!/bin/bash
 file="./hosts"
-while read -r line p; 
+while read p; 
 do
     l=( $p )
     ip=${l[0]}
-    user=$(echo $p | cut -d' ' -f1 | cut -d'=' -f2)
-    exec 'ssh-copyid -i ~/.ssh/id_rsa.pub' $user'@'$ip
+    user=${l[1]}
+    
+    user=$(echo $user | cut -d'=' -f2)
+    echo 'ssh-copyid -i ~/.ssh/id_rsa.pub' $user'@'$ip
     
 done < <(tail -n +2 hosts)
