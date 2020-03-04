@@ -1,5 +1,4 @@
 #!/bin/bash
-file="./hosts"
 while read p; 
 do
     l=( $p )
