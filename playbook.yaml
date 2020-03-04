@@ -3,7 +3,7 @@
   hosts: servers
   tasks: 
     - 
-      copy: "src={{ file }} dest=/home/ubuntu"
+      copy: "src={{ file }} dest=/home/bitnami/htdocs/"
       name: "Copy File"
     - 
       name: "Create User"
