@@ -7,6 +7,8 @@ do
     user=${l[1]}
     
     user=$(echo $user | cut -d'=' -f2)
-    echo 'ssh-copyid -i ~/.ssh/id_rsa.pub' $user'@'$ip
+    #echo 'ssh-copy-id -i ~/.ssh/id_rsa.pub' $user'@'$ip
+    ssh-copy-id -i ~/.ssh/id_rsa.pub $user'@'$ip
+    
     
 done < <(tail -n +2 hosts)
