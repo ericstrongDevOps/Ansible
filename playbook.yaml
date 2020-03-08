@@ -13,6 +13,11 @@
     -
       copy: "src={{ file }} dest=/var/www/html/"
       name: "Copy File"
+    - 
+      service:
+      name: httpd
+      state: started
+
   vars: 
-    package: git
+    package: httpd
     file: index.html
