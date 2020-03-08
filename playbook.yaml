@@ -9,14 +9,14 @@
       user: "name=eric groups=adm shell=/bin/bash,sudo generate_ssh_key=yes"
     - 
       name: "Install {{ package }}"
-      apt: "name={{ package }} state=latest"
+      yum: "name={{ package }} state=latest"
     -
       copy: "src={{ file }} dest=/var/www/html/"
       name: "Copy File"
     - 
       service:
-      name: httpd
-      state: started
+        name: httpd
+        state: started
 
   vars: 
     package: httpd
