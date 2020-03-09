@@ -1,6 +1,5 @@
 --- 
-- 
- 
+- name: ansible playbook for aws ec2 management
   hosts: tag_Name_CA
   user: ec2-user
   sudo: yes
@@ -25,6 +24,16 @@
       service:
         name: httpd
         state: started
+
+    - name: upgrade all packages
+      yum:
+        name: '*'
+        state: latest
+
+    - git:
+      repo: 'https://github.com/ericstrongDevOps/SimpleWebPage.git'
+      dest: /var/www/html/
+      version: green
 
   vars: 
     package: httpd
