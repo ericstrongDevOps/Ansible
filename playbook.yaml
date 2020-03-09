@@ -1,6 +1,10 @@
 --- 
 - 
-  hosts: servers
+ 
+  hosts: tag_Name_CA
+  user: ec2-user
+  sudo: yes
+
   tasks: 
     - ping: 
 
