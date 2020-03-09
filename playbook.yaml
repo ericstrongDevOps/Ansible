@@ -17,6 +17,10 @@
     -
       copy: "src={{ file }} dest=/var/www/html/"
       name: "Copy File"
+
+    -
+      copy: "src={{ file2 }} dest=/var/www/html/"
+      name: "Copy File"
     - 
       service:
         name: httpd
@@ -25,3 +29,4 @@
   vars: 
     package: httpd
     file: index.html
+    file2: style.css
