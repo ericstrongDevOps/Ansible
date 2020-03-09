@@ -25,14 +25,14 @@
         name: httpd
         state: started
 
-    - name: upgrade all packages
-      yum:
-        name: '*'
-        state: latest
+    # - name: upgrade all packages
+    #   yum:
+    #     name: '*'
+    #     state: latest
 
     - git:
       repo: 'https://github.com/ericstrongDevOps/SimpleWebPage.git'
-      dest: /var/www/html/
+      dest: /var/www/html/green/
       version: green
 
   vars: 
