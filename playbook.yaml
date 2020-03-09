@@ -1,9 +1,8 @@
 --- 
-- 
- 
-  hosts: tag_Name_CA
+- name: "the following Ansible playbook will create a user and update webservers behind loadbalancer"
+  hosts: key_POC
   user: ec2-user
-  sudo: yes
+  become: yes
 
   tasks: 
     - ping: 
