@@ -1,6 +1,6 @@
 --- 
 - name: "green deployment"
-  hosts: tag_aws_cloudformation_logical_id_WebServerGroupgreen
+  hosts: tag_aws_cloudformation_logical_id_WebServerGroupGreen
   user: ec2-user
   become: yes
 
