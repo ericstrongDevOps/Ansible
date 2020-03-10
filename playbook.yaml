@@ -37,6 +37,6 @@
 
   vars: 
     package: httpd
-    pachage2: git
+    package2: git
     file: index.html
     file2: style.css
