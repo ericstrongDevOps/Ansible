@@ -27,9 +27,9 @@
 
 
     - git:
-      repo: 'https://github.com/ericstrongDevOps/SimpleWebPage.git'
-      dest: /var/www/html/green/
-      version: green
+        repo: 'https://github.com/ericstrongDevOps/SimpleWebPage.git'
+        dest: /var/www/html/green/
+        version: green
 
   vars: 
     package: httpd
