@@ -1,0 +1,14 @@
+--- 
+- name: "green deployment"
+  hosts: tag_aws_cloudformation_logical_id_WebServerGroupgreen
+  user: ec2-user
+  become: yes
+
+  tasks: 
+    - ping: 
+
+    - git:
+        repo: 'https://github.com/ericstrongDevOps/SimpleWebPage.git'
+        dest: /var/www/html/deployment
+        version: green
+
