@@ -13,6 +13,10 @@
     - 
       name: "Install {{ package }}"
       yum: "name={{ package }} state=latest"
+
+    -
+      name: "Install {{ package2 }}"
+      yum: "name={{ package2 }} state=latest"
     -
       copy: "src={{ file }} dest=/var/www/html/"
       name: "Copy File"
@@ -33,5 +37,6 @@
 
   vars: 
     package: httpd
+    pachage2: git
     file: index.html
     file2: style.css
