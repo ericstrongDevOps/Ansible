@@ -1,0 +1,21 @@
+--- 
+# --extra-vars "deployment=blue|green"
+- name: "blue deployment"
+  hosts: tag_aws_autoscaling_groupName_BG_WebServerGroupBlue_6ZDF31CRU5SD
+  user: ec2-user
+  become: yes
+
+  tasks: 
+    - ping: 
+
+    - git:
+        repo: 'https://github.com/ericstrongDevOps/SimpleWebPage.git'
+        dest: /var/www/html/deployment
+        version: blue
+        when: deployment == "blue"
+
+    - git:
+        repo: 'https://github.com/ericstrongDevOps/SimpleWebPage.git'
+        dest: /var/www/html/deployment
+        version: green
+        when: deployment == "green"
