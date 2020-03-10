@@ -12,10 +12,10 @@
         repo: 'https://github.com/ericstrongDevOps/SimpleWebPage.git'
         dest: /var/www/html/deployment
         version: blue
-        when: deployment == "blue"
+      when: deployment == "blue"
 
     - git:
         repo: 'https://github.com/ericstrongDevOps/SimpleWebPage.git'
         dest: /var/www/html/deployment
         version: green
-        when: deployment == "green"
+      when: deployment == "green"
